@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<object
+    name="portal_controlpanel"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="collective.chimpdrill"
+    purge="False">
+
+    <configlet
+        title="Mailchimp &amp; Mandrill"
+        action_id="chimpdrill"
+        appId="collective.chimpdrill"
+        category="Products"
+        condition_expr=""
+        url_expr="string:${portal_url}/@@chimpdrill-settings"
+        visible="True"
+        i18n:attributes="title">
+            <permission>Manage portal</permission>
+    </configlet>
+
+</object>

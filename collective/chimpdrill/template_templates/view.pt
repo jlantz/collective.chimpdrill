@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="collective.chimpdrill">
+<body>
+<metal:main fill-slot="content-core">
+  <metal:content-core define-macro="content-core">
+
+    <a class="link-popup" href="preview" tal:attributes="href string:${view/context/absolute_url}/preview">Preview</a>
+    <a class="link-popup" href="send" tal:attributes="href string:${view/context/absolute_url}/send_email">Send</a>
+
+    <script type="text/javascript">
+      jQuery.ready(function () {
+        $('a.link-popup').prepOverlay();
+      });
+    </script>
+  </metal:content-core>
+</metal:main>
+</body>
+</html>
